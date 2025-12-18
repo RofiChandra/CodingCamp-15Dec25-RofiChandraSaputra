@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-black">
+
+<!-- Navbar -->
+<header class="flex justify-between items-center px-10 py-4 border-b-2 border-black">
+    <div class="font-bold text-lg">REVO</div>
+    <nav class="space-x-2">
+        <a href="#home" class="border border-black px-3 py-1">Home</a>
+        <a href="#profile" class="border border-black px-3 py-1">Our Profile</a>
+        <a href="#achievement" class="border border-black px-3 py-1">Achievement</a>
+        <a href="#message" class="border border-black px-3 py-1">Message Us</a>
+    </nav>
+</header>
+
+<!-- Hero / Home -->
+<section id="home" class="px-10 py-16 border-b-2 border-black">
+    <h1 class="text-2xl font-semibold">Hi <span id="userName">User</span>, Welcome To Website</h1>
+    <p class="mt-2">Ini adalah website latihan pertama</p>
+</section>
+
+<!-- Our Facilitation -->
+<section class="px-10 py-12 border-b-2 border-black">
+    <h2 class="text-xl font-semibold mb-8">Our Facilitation</h2>
+    <div class="flex flex-col md:flex-row justify-around items-center gap-10">
+        <div class="text-center">
+            <div class="w-32 h-32 rounded-full border-2 border-black mx-auto mb-3"></div>
+            <p>Professional Teacher</p>
+        </div>
+        <div class="text-center">
+            <div class="w-32 h-32 rounded-full border-2 border-black mx-auto mb-3"></div>
+            <p>Sport Field</p>
+        </div>
+        <div class="text-center">
+            <div class="w-32 h-32 rounded-full border-2 border-black mx-auto mb-3"></div>
+            <p>Classroom</p>
+        </div>
+    </div>
+</section>
+
+<!-- Message Us -->
+<section id="message" class="px-10 py-12">
+    <h2 class="text-xl font-semibold mb-6">Message Us</h2>
+    <div class="flex flex-col md:flex-row gap-10">
+
+        <!-- Form -->
+        <form id="messageForm" class="md:w-1/2">
+            <div class="mb-3">
+                <label>Nama</label>
+                <input type="text" id="name" class="w-full border border-black p-2" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Tanggal Lahir</label>
+                <input type="date" id="birth" class="w-full border border-black p-2" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Jenis Kelamin</label><br>
+                <input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki
+                <input type="radio" name="gender" value="Perempuan" class="ml-4"> Perempuan
+            </div>
+
+            <div class="mb-3">
+                <label>Pesan</label>
+                <textarea id="messageText" class="w-full border border-black p-2" required></textarea>
+            </div>
+
+            <button class="w-full border border-black py-2">Submit</button>
+        </form>
+
+        <!-- Result -->
+        <div id="result" class="md:w-1/2 border border-black p-4">
+            <p><strong>Current time :</strong> -</p>
+            <p><strong>Nama :</strong> -</p>
+            <p><strong>Tanggal Lahir :</strong> -</p>
+            <p><strong>Jenis Kelamin :</strong> -</p>
+            <p><strong>Pesan :</strong> -</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-right px-10 py-3 border-t-2 border-black">
+    Created By RevoU
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
