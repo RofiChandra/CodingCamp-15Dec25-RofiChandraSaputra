@@ -1,96 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="utf-8" />
+    <title> Mini Project CCSE RevoU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.10.0/dist/css/bootstrap-datepicker.min.css">
+
+    <!-- Custom Own CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  <!-- {{-- CSS Files --}}
+  @include('landingpage.layouts.css')
+  @include('landingpage.layouts.custom-css')
+  {{-- CSS Files --}} -->
+
 </head>
-<body class="font-sans text-black">
 
-<!-- Navbar -->
-<header class="flex justify-between items-center px-10 py-4 border-b-2 border-black">
-    <div class="font-bold text-lg">REVO</div>
-    <nav class="space-x-2">
-        <a href="#home" class="border border-black px-3 py-1">Home</a>
-        <a href="#profile" class="border border-black px-3 py-1">Our Profile</a>
-        <a href="#achievement" class="border border-black px-3 py-1">Achievement</a>
-        <a href="#message" class="border border-black px-3 py-1">Message Us</a>
-    </nav>
-</header>
+<body>
 
-<!-- Hero / Home -->
-<section id="home" class="px-10 py-16 border-b-2 border-black">
-    <h1 class="text-2xl font-semibold">Hi <span id="userName">User</span>, Welcome To Website</h1>
-    <p class="mt-2">Ini adalah website latihan pertama</p>
-</section>
-
-<!-- Our Facilitation -->
-<section class="px-10 py-12 border-b-2 border-black">
-    <h2 class="text-xl font-semibold mb-8">Our Facilitation</h2>
-    <div class="flex flex-col md:flex-row justify-around items-center gap-10">
-        <div class="text-center">
-            <div class="w-32 h-32 rounded-full border-2 border-black mx-auto mb-3"></div>
-            <p>Professional Teacher</p>
+  
+    <!-- Nav -->
+    <header id="header" class="">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-info px-4 fixed-top">
+                <div class="container-fluid">   
+    
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="/assets/path.gif" alt="Logo" width="40" height="40" class="rounded-circle me-2" >
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#banner">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#our-company-page">Our Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#profile-page">Our HeadQuarter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact-page">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <div class="text-center">
-            <div class="w-32 h-32 rounded-full border-2 border-black mx-auto mb-3"></div>
-            <p>Sport Field</p>
-        </div>
-        <div class="text-center">
-            <div class="w-32 h-32 rounded-full border-2 border-black mx-auto mb-3"></div>
-            <p>Classroom</p>
-        </div>
-    </div>
-</section>
+    </header>
+    <!-- Nav -->
+    
+    <!-- Main -->
+        <main>
+            <!-- Home Page -->
+             <section id="banner">
+                <div class="inner">
+					<h1 id="welcome-text">Welcome, Guest!</h1>
+                    <a href="#our-company-page" class="btn btn-outline-info text-white bg-transparent">Explore</a>
+                </div>
+			</section>
+            <!-- End Home Page -->
 
-<!-- Message Us -->
-<section id="message" class="px-10 py-12">
-    <h2 class="text-xl font-semibold mb-6">Message Us</h2>
-    <div class="flex flex-col md:flex-row gap-10">
+            <!-- Our Company Page -->
+            <section id="our-company-page" class="p-5">
+                <header>
+                    <h2 class="text-xl font-bold text-center">Our Company</h2>
+                </header>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="/assets/company.jpg" alt="Logo Company" class="img-fluid w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="text-left">Focused on the development and implementation of technology-based solutions to improve efficiency, productivity, and service quality across various sectors. Through innovations in software, hardware, and digital systems, technology companies help businesses and communities adapt to changing times, drive digital transformation, and create sustainable added value.</p>
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-lg-6 panel panel-primary">
+                                <h3 class="text-center">Vision</h3>
+                                <ul class="list_visi_misi">
+                                    <li>To become a leading technology company that delivers innovative digital solutions with a positive global impact.</li>
+                                    <li>To drive sustainable digital transformation that enhances business competitiveness in the modern era.</li>
+                                    <li>To build a secure, reliable, and future-ready technology ecosystem.</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h3 class="text-center">Mission</h3>
+                                <ul class="list_visi_misi">
+                                    <li>To develop high-quality, user-friendly technology products and services that meet customer needs.</li>
+                                    <li>To leverage technology to improve efficiency, productivity, and value for clients and partners.</li>
+                                    <li>To cultivate skilled, adaptable, and ethical talent through a culture of innovation and continuous learning.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Form -->
-        <form id="messageForm" class="md:w-1/2">
-            <div class="mb-3">
-                <label>Nama</label>
-                <input type="text" id="name" class="w-full border border-black p-2" required>
-            </div>
+            <!-- Profile Page -->
+            <section id="profile-page" class="bg-info text-white p-5">
+                <header>
+                    <h2 class="text-xl font-bold text-center">Our HeadQuarter</h2>
+                </header>
+                <div class="row text-center p-3">
+                    <div class="col-md-4 mb-4">
+                        <figure>
+                            <img
+                                src="/assets/founder.png"
+                                alt="Founder"
+                                class="img-fluid rounded-circle mb-3 img_headquarter"
+                            >
+                            <figcaption class="fw-semibold">
+                                Founder
+                            </figcaption>
+                        </figure>
+                    </div>
 
-            <div class="mb-3">
-                <label>Tanggal Lahir</label>
-                <input type="date" id="birth" class="w-full border border-black p-2" required>
-            </div>
+                    <div class="col-md-4 mb-4">
+                        <figure>
+                            <img
+                                src="/assets/co-founder.png"
+                                alt="Co-Founder"
+                                class="img-fluid rounded-4 mb-3 img_headquarter"
+                            >
+                            <figcaption class="fw-semibold">
+                                Co-Founder
+                            </figcaption>
+                        </figure>
+                    </div>
 
-            <div class="mb-3">
-                <label>Jenis Kelamin</label><br>
-                <input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki
-                <input type="radio" name="gender" value="Perempuan" class="ml-4"> Perempuan
-            </div>
+                    <div class="col-md-4 mb-4">
+                        <figure>
+                            <img
+                                src="/assets/director.png"
+                                alt="Director"
+                                class="img-fluid rounded-4 mb-3 img_headquarter"
+                            >
+                            <figcaption class="fw-semibold">
+                                Director
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <!-- End Profile Page -->
+            
+            <!-- Contact Page -->
+            <section id="contact-page" class="p-5 panel-primary">
+                <header>
+                    <h2 class="text-xl font-bold text-center">Contact Us</h2>
+                    <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
+                        promptly.</p>
+                </header>
+                <form action="" id="formContact">
+                    <div class="row">
+                        <!-- Left Side -->
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name&nbsp;<span class="text-danger">*</span></label>
+                                <input type="text" data-name="Name" name="name" id="name" class="form-control non-editable"  placeholder="Name" aria-describedby="helpId" required/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="gender" class="form-label">Gender</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Male" type="radio" name="gender" id="gender_male" checked>
+                                    <label class="form-check-label" for="gender_male">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Female" type="radio" name="gender" id="gender_female">
+                                    <label class="form-check-label" for="gender_female">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="birth_date" class="form-label">Birth Date&nbsp;<span class="text-danger">*</span></label>
+                                <input type="text" data-name="Birth Date" class="form-control" id="birth_date" name="birth_date" placeholder="dd/mm/yyyy" autocomplete="off"  required>
+                            </div>
 
-            <div class="mb-3">
-                <label>Pesan</label>
-                <textarea id="messageText" class="w-full border border-black p-2" required></textarea>
-            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message&nbsp;<span class="text-danger">*</span></label>
+                                <textarea class="form-control" data-name="Message" name="message" id="message" rows="3" required></textarea>
+                            </div>
 
-            <button class="w-full border border-black py-2">Submit</button>
-        </form>
+                            <button class="btn btn-success" type="submit">Submit</button>
+                        </div>
+                        <!-- End Left Side -->
+                        <!-- Right Side -->
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr><th colspan="5" class="text-center">Your Message</th></tr>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Gender</th>
+                                            <th>Birth Date</th>
+                                            <th>Message</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody_response">
+                                        <tr id="row_exist">
+                                            <td colspan="5" class="text-center">No Data!</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- End Right Side -->
+                    </div>
+                </form>
+            </section>
+            <!-- End Contact Page -->
+        </main>
+    <!-- End Main -->
 
-        <!-- Result -->
-        <div id="result" class="md:w-1/2 border border-black p-4">
-            <p><strong>Current time :</strong> -</p>
-            <p><strong>Nama :</strong> -</p>
-            <p><strong>Tanggal Lahir :</strong> -</p>
-            <p><strong>Jenis Kelamin :</strong> -</p>
-            <p><strong>Pesan :</strong> -</p>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="text-right px-10 py-3 border-t-2 border-black">
-    Created By RevoU
-</footer>
-
-<script src="js/script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-info text-white">
+        <p class="text-center p-4">© 2025 Firo Company. All rights reserved.</p>
+    </footer>
+    <!-- End Footer -->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Datepicker -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.10.0/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- Custom Own JS -->
+    <script src="/js/script.js"></script>
 </body>
+
 </html>
